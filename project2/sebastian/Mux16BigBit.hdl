@@ -1,0 +1,11 @@
+//takes two 16-bit values, muxes the biggest bit from each
+
+CHIP Mux16BigBit {
+    IN 	a[16],
+				b[16],
+				sel;
+    OUT out;
+
+    PARTS:
+			Mux(a=a[15],b=b[15],sel=sel,out=out);
+}
